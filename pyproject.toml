@@ -1,0 +1,6 @@
+[tool.taskipy.tasks]
+
+run = "streamlit run src/app.py"
+kill = "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :8501') do taskkill /PID %a /F"
+dev = "streamlit run src/app.py --server.port 8501"
+test = "pytest test/"
